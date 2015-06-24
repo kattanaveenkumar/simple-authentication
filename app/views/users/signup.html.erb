@@ -1,0 +1,23 @@
+<div>
+	<%= flash[:warning] = "Signup unsuccessful" if flash[:warning].present? %>
+</div>
+<h1>Registration Form</h1>
+<%= form_tag :action=>  "signup" do  %>
+	<label for="user_first_name">First Name</label><br/>
+	<%= text_field "user","first_name" %><br/>
+
+	<label for="user_second_name"> Last Name </label><br/>
+	<%= text_field "user", "last_name" %><br/>
+
+	<label for="user_email"> Email</label><br/>
+	<%= email_field "user", "email" %><br/>
+
+	<label for="user_password"> Password</label><br/>
+	<%= password_field "user", "password" %><br/>
+
+	<label for="user_password_confirmation">Confirm Password</label><br/>
+	<%= password_field "user", "password_confirmation" %><br/>
+
+	<%= submit_tag "Register"%>
+<%end%>
+
